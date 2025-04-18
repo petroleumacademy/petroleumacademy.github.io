@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petroleum Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      const elements = document.querySelectorAll('[data-en], [data-es]');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    }
+    window.onload = () => switchLanguage('en');
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Language Switch -->
+  <div class="bg-gray-200 text-right px-6 py-2">
+    <button onclick="switchLanguage('en')" class="text-blue-700 font-semibold px-2">EN</button>
+    <button onclick="switchLanguage('es')" class="text-blue-700 font-semibold px-2">ES</button>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white">
+    <div class="container mx-auto p-6 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="../PA-logo.png" alt="Logo" class="rounded-full" style="width: 50px; height: 50px;">
+        <h1 class="text-2xl font-bold" data-en="Petroleum Academy" data-es="Academia BrightMind"></h1>
+      </div>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:underline" data-en="About" data-es="Acerca">About</a>
+        <a href="#courses" class="hover:underline" data-en="Courses" data-es="Cursos">Courses</a>
+        <a href="#testimonials" class="hover:underline" data-en="Testimonials" data-es="Testimonios">Testimonials</a>
+        <a href="#contact" class="hover:underline" data-en="Contact" data-es="Contacto">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4" data-en="Unlock Your Potential" data-es="Desbloquea Tu Potencial"></h2>
+    <p class="text-lg mb-6" data-en="Empowering learners through expert-led education and hands-on training." data-es="Empoderando a los estudiantes con educación guiada por expertos y formación práctica."></p>
+    <a href="#contact" class="bg-white text-blue-700 font-semibold py-2 px-6 rounded-full hover:bg-gray-200 transition" data-en="Get Started" data-es="Comienza Ahora">Get Started</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 md:px-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4" data-en="Why Choose Petroleum Academy?" data-es="¿Por Qué Elegir Petroleum Academy?"></h3>
+      <p class="text-gray-600 text-lg" data-en="At Petroleum Academy, we believe in learning that inspires. With world-class instructors, engaging content, and a community that supports growth, we help you reach your goals faster." data-es="En Petroleum Academy, creemos en un aprendizaje que inspira. Con instructores de clase mundial, contenido atractivo y una comunidad que apoya el crecimiento, te ayudamos a alcanzar tus metas más rápido."></p>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-16 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-10" data-en="Our Popular Courses" data-es="Nuestros Cursos Populares"></h3>
+      <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h4 class="text-xl font-semibold mb-2" data-en="Industrial Cybersecurity" data-es="Ciberseguridad Industrial"></h4>
+          <p class="text-gray-600" data-en="Master cybersecurity for industrial enterprises." data-es="Dominá la ciberseguridad para empresas industriales."></p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h4 class="text-xl font-semibold mb-2" data-en="Data Science & AI for Engineers" data-es="Ciencia de Datos e IA para Ingenieros"></h4>
+          <p class="text-gray-600" data-en="Dive into data analysis, machine learning, and AI for engineers." data-es="Adéntrate en el análisis de datos, el aprendizaje automático y el desarrollo de IA para ingenieros."></p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h4 class="text-xl font-semibold mb-2" data-en="Technical English" data-es="Inglés técnico"></h4>
+          <p class="text-gray-600" data-en="Basic, intermediate, and advanced technical english for engineers." data-es="Inglés básico, intermedio y avanzado para ingenieros."></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-gray-100 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-10" data-en="What Our Students Say" data-es="Lo Que Dicen Nuestros Estudiantes"></h3>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white shadow p-6 rounded-xl">
+          <p class="text-gray-600 italic" data-en="'Petroleum Academy changed my life! The instructors are so helpful and the courses are top-notch.'" data-es="'¡Petroleum Academy cambió mi vida! Los instructores son muy útiles y los cursos son de primera calidad.'"></p>
+          <p class="mt-4 font-semibold" data-en="— Noreen B., Entrepreneur" data-es="— Noreen B., Emprendedora"></p>
+        </div>
+        <div class="bg-white shadow p-6 rounded-xl">
+          <p class="text-gray-600 italic" data-en="'A fantastic learning experience with practical examples. Highly recommended!" data-es="'Una experiencia de aprendizaje fantástica con ejemplos prácticos. ¡Altamente recomendado!'"></p>
+          <p class="mt-4 font-semibold" data-en="— Alejandro L., Business owner" data-es="— Alejandro L., Empresario"></p>
+        </div>
+        <div class="bg-white shadow p-6 rounded-xl">
+          <p class="text-gray-600 italic" data-en="'From zero to confident English speaker. The best academy I've attended!'" data-es="'De cero a hablar inglés con confianza. ¡La mejor academia a la que he asistido!'"></p>
+          <p class="mt-4 font-semibold" data-en="— Gustavo Z., Engineer" data-es="— Gustavo Z., Ingeniero"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-blue-700 text-white px-6 md:px-20">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4" data-en="Get in Touch" data-es="Contáctanos"></h3>
+      <p class="mb-6" data-en="Have questions? Ready to enroll? We'd love to hear from you!" data-es="¿Tienes preguntas? ¿Listo para inscribirte? ¡Nos encantaría saber de ti!"></p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded text-gray-800" required />
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded text-gray-800" required />
+        <textarea name="message" placeholder="Your Message" class="w-full p-3 rounded text-gray-800" rows="4" required></textarea>
+        <button type="submit" class="bg-white text-blue-700 font-semibold py-2 px-6 rounded-full hover:bg-gray-200 transition" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center text-gray-600 py-6 text-sm">
+    © 2025 Petroleum Academy. All rights reserved.
+  </footer>
+
+</body>
+</html>
