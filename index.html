@@ -15,15 +15,36 @@
     window.onload = () => switchLanguage('es');
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+ 
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
   <!-- Language Switch -->
-  <div class="bg-gray-200 text-right px-6 py-2">
-    <button onclick="switchLanguage('en')" class="text-blue-700 font-semibold px-2">EN</button>
-    <button onclick="switchLanguage('es')" class="text-blue-700 font-semibold px-2">ES</button>
+<div class="bg-gray-200 px-6 py-2">
+  <div class="flex justify-between items-center">
+    <!-- Left Side - Contact Info -->
+    <ul class="sp-contact-info inline-flex space-x-5 list-none m-0 p-0">
+      <li class="inline-flex items-center space-x-2">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <a href="tel:+54 9 29 2147 0835">+54 9 29 2147 0835</a>
+      </li>
+      <li class="inline-flex items-center space-x-2">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:academy.eugenio@gmail.com">academy.studyhelp@gmail.com</a>
+      </li>
+    </ul>
+
+    <!-- Right Side - Language Buttons -->
+    <div>
+      <button onclick="switchLanguage('en')" class="text-blue-700 font-semibold px-2">EN</button>
+      <button onclick="switchLanguage('es')" class="text-blue-700 font-semibold px-2">ES</button>
+    </div>
   </div>
+</div>
+
+
 
   <!-- Header -->
   <header class="bg-blue-700 text-white">
